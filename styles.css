@@ -1,22 +1,22 @@
 * {
+  font-family: "Dancing Script", cursive;
   padding: 0;
   margin: 0;
-  font-family: "Dancing Script", cursive;
 }
 
 .hero {
-  position: relative;
-  height: 100vh;
-  width: 100%;
   background: #eff4fd;
+  height: 100vh;
+  position: relative;
+  width: 100%;
 }
 
 nav {
-  display: flex;
-  width: 95%;
-  padding: 20px 20px;
   align-items: center;
+  display: flex;
   justify-content: space-between;
+  padding: 10px 20px;
+  width: 95%;
 }
 
 nav ul li {
@@ -26,18 +26,115 @@ nav ul li {
 }
 
 nav ul li a {
-  text-decoration: none;
   color: #000;
-  font-weight: bold;
   font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 nav ul li a:hover {
+  color: #fcc6cf;
   text-decoration: underline;
+}
+
+.fa-brands {
+  color: #000;
+  font-size: 2rem;
+  padding: 0 12px;
+}
+
+.fa-brands:hover {
   color: #fcc6cf;
 }
 
 .detel {
+  font-size: 1.25rem;
   margin-left: 8%;
-  margin-top: 15%;
+  margin-top: 12%;
+}
+
+/* Button 1 */
+
+.button {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: auto;
+  padding: 20px 20px;
+}
+
+.btn1 {
+  background: none;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 32px;
+  padding: 20px 20px;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.btn1::before {
+  background-color: #fcc6cf;
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  transition: transform 0.15s ease;
+  width: 100%;
+  z-index: -1;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.btn1::after {
+  border: 2px solid #000;
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transition: transform 0.15s ease;
+  width: 100%;
+  z-index: -1;
+}
+
+.btn1:hover::after {
+  transform: translate(-5px, 5px);
+}
+
+.btn1:hover::before {
+  transform: translate(5px, -5px);
+}
+
+.images {
+  bottom: 0;
+  height: 80%;
+  position: absolute;
+  right: 200px;
+  width: 45%;
+}
+
+.images img {
+  bottom: 0;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  transition: bottom 1s, left 1s;
+}
+
+.images:hover .shape {
+  bottom: 40px;
+}
+
+.images:hover .marti {
+  left: 45%;
 }
