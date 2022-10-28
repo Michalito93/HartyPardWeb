@@ -1,50 +1,77 @@
 * {
-  font-family: "Dancing Script", cursive;
   padding: 0;
   margin: 0;
+  font-family: "Dancing Script", cursive;
 }
 
 .hero {
-  background: #eff4fd;
-  height: 100vh;
   position: relative;
+  height: 100vh;
   width: 100%;
+  background: #eff4fd;
 }
 
 nav {
-  align-items: center;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
   width: 95%;
 }
 
-nav ul li {
-  display: inline-block;
-  list-style: none;
+.navbar-links ul {
+  display: flex;
   margin: 10px 70px;
 }
 
-nav ul li a {
-  color: #000;
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  padding: 2rem;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
+  color: #000;
 }
 
-nav ul li a:hover {
+.navbar-links ul li a:hover {
   color: #fcc6cf;
   text-decoration: underline;
 }
 
+.social {
+  display: block;
+}
+
 .fa-brands {
-  color: #000;
   font-size: 2rem;
   padding: 0 12px;
+  color: #000;
 }
 
 .fa-brands:hover {
   color: #fcc6cf;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 4.5rem;
+  right: 50vw;
+  width: 30px;
+  height: 21px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 10px;
 }
 
 .detel {
@@ -137,4 +164,28 @@ nav ul li a:hover {
 
 .images:hover .marti {
   left: 45%;
+}
+
+@media (max-width: 900px) {
+  .navbar-links li a {
+    font-size: 1.25rem;
+  }
+
+  .fa-brands {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 840px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .social {
+    display: none;
+  }
 }
