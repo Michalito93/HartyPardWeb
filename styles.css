@@ -63,7 +63,7 @@ nav ul li a {
   color: #000;
 }
 
-.navbar-links ul li a:hover {
+nav ul li a:hover {
   color: var(--main-color);
   text-decoration: underline;
 }
@@ -154,6 +154,10 @@ nav ul li a {
   transform: translate(5px, -5px);
 }
 
+nav .fa-solid {
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
   .header {
     background-image: url(images/background-screen.png);
@@ -162,5 +166,42 @@ nav ul li a {
   .detel {
     margin-top: 60%;
     font-size: 16px;
+  }
+
+  .social {
+    display: none;
+  }
+
+  nav .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    background: rgb(252, 198, 207, 0.9);
+    z-index: 2;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  nav ul li a:hover {
+    color: #eff4fd;
+    text-decoration: underline;
   }
 }

@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,28 +26,25 @@
               ><image class="logo" src="images/HPlogopng.png"></image
             ></a>
             <div class="navbar-links">
-              <ul>
+              <ul id="sidemenu">
                 <li><a href="#">O mnie</a></li>
                 <li><a href="#">Usługi</a></li>
                 <li><a href="#">Galeria</a></li>
                 <li><a href="#">Kontakt</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
               </ul>
             </div>
-            <a href="#" class="toggle-button">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </a>
             <div class="social">
               <i class="fa-brands fa-instagram"></i>
               <i class="fa-brands fa-square-facebook"></i>
             </div>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
           </nav>
         </div>
         <div class="detel">
           <h1>
             Cześć,<br />
-            nazywam się <span>Martyna.</span>
+            nazywam się <span>Martyna</span>.
           </h1>
           <h2>A to jest <span>Harty Pard Dekoracje</span></h2>
           <div class="button">
@@ -58,5 +54,16 @@
       </header>
     </div>
     <section></section>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
   </body>
 </html>
