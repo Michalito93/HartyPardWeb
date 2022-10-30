@@ -1,5 +1,5 @@
 :root {
-  --main-color: #fcc6cf;
+  --main-color: rgb(161, 198, 201);
 }
 
 * {
@@ -20,7 +20,7 @@ body {
   color: #000;
 }
 
-.hero {
+#header {
   position: relative;
   height: 100vh;
   width: 100%;
@@ -85,7 +85,7 @@ nav ul li a:hover {
 .detel {
   margin-left: 8%;
   margin-top: 12%;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .detel h1 span {
@@ -96,7 +96,7 @@ nav ul li a:hover {
 /* Button 1 */
 
 .button {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
   margin: auto;
   padding: 20px 20px;
@@ -108,12 +108,13 @@ nav ul li a:hover {
   cursor: pointer;
   display: inline-block;
   flex-shrink: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 800;
   margin: 32px;
-  padding: 20px 20px;
+  padding: 10px 20px;
   position: relative;
   text-decoration: none;
+  text-align: center;
   z-index: 1;
 }
 
@@ -154,17 +155,47 @@ nav ul li a:hover {
   transform: translate(5px, -5px);
 }
 
+/*----*/
+
 nav .fa-solid {
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+/* O mnie */
+
+#about {
+  width: 100%;
+  padding: 100px 0;
+  font-size: 20px;
+  background-image: url(images/background2.png);
+}
+
+#about img {
+  height: auto;
+  width: 430px;
+  margin-left: 10vw;
+}
+
+.about-description {
+  width: 550px;
+}
+
+.main {
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 900px) {
   .header {
     background-image: url(images/background-screen.png);
   }
 
   .detel {
-    margin-top: 60%;
+    margin-top: 40%;
     font-size: 16px;
   }
 
@@ -175,6 +206,7 @@ nav .fa-solid {
   nav .fa-solid {
     display: block;
     font-size: 25px;
+    cursor: pointer;
   }
 
   nav ul {
@@ -184,7 +216,7 @@ nav .fa-solid {
     width: 200px;
     height: 100vh;
     padding-top: 50px;
-    background: rgb(252, 198, 207, 0.9);
+    background: rgb(161, 198, 201, 0.9);
     z-index: 2;
   }
 
@@ -203,5 +235,17 @@ nav .fa-solid {
   nav ul li a:hover {
     color: #eff4fd;
     text-decoration: underline;
+  }
+
+  nav .fa-bars:hover {
+    color: var(--main-color);
+  }
+
+  nav .fa-xmark:hover {
+    color: #eff4fd;
+  }
+
+  #about img {
+    display: none;
   }
 }
